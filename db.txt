@@ -1,0 +1,3 @@
+CREATE TABLE `tekweb`.`mahasiswa` ( `id` INT NOT NULL AUTO_INCREMENT , `nama` VARCHAR(200) NOT NULL , `nrp` VARCHAR(10) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `tekweb`.`nilai` ( `id` INT NOT NULL AUTO_INCREMENT , `id_mhs` INT NOT NULL , `kategori_nilai` VARCHAR(100) NOT NULL , `nilai` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+ALTER TABLE `nilai` ADD FOREIGN KEY (`id_mhs`) REFERENCES `mahasiswa`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
